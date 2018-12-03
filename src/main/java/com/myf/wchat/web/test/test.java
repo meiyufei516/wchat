@@ -1,4 +1,4 @@
-package com.myf.wchat.web;
+package com.myf.wchat.web.test;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,4 +14,5 @@ public class test {
 	public String checkBoxTest(){
 		return "/test/picturePre";
 	}
+
 }
