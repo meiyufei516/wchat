@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="qrCode"></div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script th:src="@{/query.qrcode.js}"></script>
+<script th:inline="javascript">
+    $('#qrCode').qrcode({
+        render: 'canvas',   //table或者canvas
+        width: 200,
+        height: 200,
+        foreground: "#C00",//二维码颜色
+        background: "#FFF",//二维码背景色
+        text: 'http://www.baidu.com',
+    });
+</script>
+</html>
