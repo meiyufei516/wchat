@@ -2,7 +2,7 @@ package com.myf.wchat.web.test.singeltontest;
 
 /**
  * @author MeiYF
- * @time 2018/12/3 15:39
+ * 2018/12/3 15:39
  * 静态内部类
  * 这种方式同样利用了classloder的机制来保证初始化instance时只有一个线程，
  * 它跟第三种和第四种方式不同的是（很细微的差别）：第三种和第四种方式是只要Singleton类被装载了，
@@ -15,13 +15,13 @@ package com.myf.wchat.web.test.singeltontest;
  **/
 public class SingleTon5 {
 
-	private SingleTon5(){}
+	private SingleTon5() { }
 
-	private static class SingleTon5Hodler{
-		private static SingleTon5 singleTon5=new SingleTon5();
+	private static class SingleTon5Hodler {
+		private static SingleTon5 singleTon5 = new SingleTon5();
 	}
 
-	public static SingleTon5 getSingleTon5(){
+	public static SingleTon5 getSingleTon5() {
 		return SingleTon5Hodler.singleTon5;
 	}
 }
