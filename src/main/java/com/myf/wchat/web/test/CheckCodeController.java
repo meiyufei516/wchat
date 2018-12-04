@@ -1,4 +1,4 @@
-package com.myf.wchat.web;
+package com.myf.wchat.web.test;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,8 @@ import java.util.Map;
 
 /**
  * @author MeiYF
- * @time 2018/11/20 9:49
+ * 2018/11/20 9:49
+ * 验证码的测试
  **/
 @Controller
 public class CheckCodeController {
@@ -27,11 +28,21 @@ public class CheckCodeController {
 	@Autowired
 	DefaultKaptcha defaultKaptcha;
 
+	/**
+	 * 跳转页面
+	 * @return 返回
+	 */
 	@RequestMapping("/")
 	public String turn(){
-		return "/checkCode/checkCode";
+		return "/test/checkCode/checkCode";
 	}
 
+	/**
+	 * 点击切换验证码
+	 * @param httpServletRequest
+	 * @param httpServletResponse
+	 * @throws Exception
+	 */
 	@RequestMapping("/defaultKaptcha")
 	public void defaultKaptcha(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws Exception{
 		byte[] captchaChallengeAsJpeg = null;
@@ -62,7 +73,7 @@ public class CheckCodeController {
 
 
 	/**
-	 * 校验 验证码
+	 * 校验验证码
 	 * @param request
 	 * @param model
 	 * @param vrifyCode
