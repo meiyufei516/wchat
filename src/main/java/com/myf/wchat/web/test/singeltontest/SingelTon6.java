@@ -16,6 +16,9 @@ public class SingelTon6 {
 
 
 	private enum SingelTon {
+		/**
+		 * INSTANCE
+		 */
 		INSTANCE;
 		private SingelTon6 singelTon6;
 

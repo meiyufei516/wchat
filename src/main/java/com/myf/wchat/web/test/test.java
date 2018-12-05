@@ -38,4 +38,15 @@ public class test {
 		return "/test/picturePre";
 	}
 
+
+	/**
+	 * main方法
+	 */
+	public static void main(String[] args) {
+		String a="bbc";
+		final String b="b";
+		final String c="bc";
+		String d=b+c;
+		System.out.println(d==a);
+	}
 }
