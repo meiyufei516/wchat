@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="guo" style="width:500px; height:200px; border:1px solid red" contenteditable="true">
+    <img src="qqface/1.gif" />
+</div>
+<input type="button" value="插入" onclick="insert()" />
+</body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script th:inline="javascript">
+    function insert() {
+        $("#guo").append("<img th:src='@{/img/2.jpg}' />");
+    }
+</script>
+</html>
